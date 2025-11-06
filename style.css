@@ -1,0 +1,158 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body */
+body {
+  background: radial-gradient(circle at top, #091236, #1e215d, #2d0b3f);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Wrapper */
+.wrapper {
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 35px 25px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+  animation: fadeUp 1.2s ease-in-out;
+}
+
+/* Circle Image */
+.circle-image {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 15px;
+  border: 3px solid #00e6b8;
+  box-shadow: 0 0 20px rgba(0, 230, 184, 0.6);
+}
+
+.circle-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Headings */
+h1 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #00e6b8, #ffeb3b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+
+.subs {
+  font-size: 0.9rem;
+  color: #b8c7ff;
+}
+
+.owner {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin: 10px 0 20px;
+}
+
+.owner span {
+  color: #00e6b8;
+  font-weight: 600;
+}
+
+.desc {
+  font-size: 0.95rem;
+  color: #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Timer Section */
+.timer-box {
+  margin-bottom: 20px;
+}
+
+.timer-box p {
+  font-size: 0.9rem;
+  color: #b0c4de;
+}
+
+#timer {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00ffc6;
+  margin-top: 5px;
+}
+
+/* Join Button */
+#joinBtn {
+  background: linear-gradient(90deg, #ffb300, #ff6f00);
+  border: none;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.8rem;
+  padding: 12px 30px;
+  border-radius: 35px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  animation: fadePulse 2s infinite alternate;
+}
+
+#joinBtn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(255, 179, 0, 0.7);
+}
+
+/* Animations */
+@keyframes fadePulse {
+  from {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+  .desc {
+    font-size: 0.85rem;
+  }
+  #joinBtn {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+}
